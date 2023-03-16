@@ -24,7 +24,7 @@ li{list-style:none}
    
 canvas{
   display:block;
-  vertical-align:bottom;
+  /* vertical-align:bottom; */
 } 
 
 body {
@@ -33,11 +33,16 @@ body {
     align-items: center;
     font-family: 'Roboto', sans-serif;
     background-color: rgba(51, 51, 51, 0.213);
+    flex-direction: column;
 }
 
-.container {
+.containerb{
     margin:auto;
     width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
 }
 
 .banner{
@@ -56,24 +61,221 @@ body {
     color: #fff;
     top: 50%;
     left: 15%;
-    margin: -110px 0 0 -100px;
+    margin: -120px 0 0 -100px;
     padding: 20px;
     border-radius: 4px;
     box-sizing: border-box;
     z-index: 100;
 }
+.panelbanner img {
+    transition: transform 0.2s ease-in-out; 
+    width: 20%;
+    margin-bottom: 100px;
+    user-select: none;
+
+}
+.panelbanner img:hover{
+    transform: scale(1.2);
+} 
 .panelbanner h1 {
-    font-style: black;
-    font-weight: 400;
-    font-size: 58.8461px;
+    font-weight: 700;
+    font-size: 7rem;
     line-height: 71px;
-
-    margin-top: -4px;
-
+    color: #FFFFFF;
+    padding-bottom: 40px;
 }
 .panelbanner p {
-    display: block;
-    margin-bottom: 7px;
-    font-size: .75em;
+    padding-top: 40px;
+    font-weight: 400;
+    font-size: 4rem;
+    line-height: 34px;
+    color: #79BA00;
 }
 
+@keyframes sube-y-baja {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+.animflecha{
+    margin: 20px;
+    width: 3%;
+    animation-name: sube-y-baja;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+/* Estilos Productos */
+#productos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+  }
+  
+  .producto {
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .producto img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .producto h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .producto p {
+    font-size: 1rem;
+    line-height: 1.2;
+    margin-bottom: 10px;
+  }
+  
+  .producto a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .producto a:hover {
+    background-color: #007b3e;
+  }
+  
+
+ /* Estilos Footer */
+ footer {
+    background-color: #2d2d2d;
+    color: #fff;
+    padding: 50px 0;
+    margin-top: 50px;
+    width: 100%;
+  }
+  
+  .containerf {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content:space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-links,
+  .footer-contact,
+  .footer-social {
+    display: inline-block;
+    margin-right: 10px;
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+  }
+  
+  .footer-links h3,
+  .footer-contact h3,
+  .footer-social h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .footer-links ul,
+  .footer-contact ul,
+  .footer-social ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .footer-links li,
+  .footer-contact li,
+  .footer-social li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-links a,
+  .footer-contact a,
+  .footer-social a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .footer-links a:hover,
+  .footer-contact a:hover,
+  .footer-social a:hover {
+    color: #007b3e;
+  }
+  
+  .footer-social i {
+    font-size: 2rem;
+    margin-right: 10px;
+  }
+  
+
+  @media screen and (min-width: 320px) {
+    /* reglas CSS para pantallas pequeñas */
+    .panelbanner{
+      top: 100%;
+      left: 10%;
+    }
+    .panelbanner p {
+      color: #fff;
+  }
+  }
+  
+  @media screen and (min-width: 480px) {
+    /* reglas CSS para pantallas medianas */
+    .panelbanner{
+      top: 80%;
+      left: 10%;
+    }
+    .panelbanner p {
+      color: #aa3535;
+  }
+  }
+  
+  @media screen and (min-width: 768px) {
+    /* reglas CSS para pantallas grandes */
+    .panelbanner{
+      top: 50%;
+      left: 10%;
+    }
+    .panelbanner p {
+      color: #79BA00;
+  }
+
+    
+  }
+
+/* 
+  .panelbanner h1 {
+    font-size: 70px;
+  }
+  .panelbanner p {
+      font-size: 40px;
+  }
+
+  .containerf {
+    flex-direction: column;
+  }
+  .producto {
+    width: 100%;
+  }
+  .footer-links,
+  .footer-contact,
+  .footer-social {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+   */
