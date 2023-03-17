@@ -227,9 +227,14 @@ body {
   
 
  @media screen and (max-width: 768px) {
+  footer {
+    max-width: 100%; /* Ancho máximo del footer */
+    margin: 0 auto; /* Centrado horizontal del footer */
+  }
   .containerf {
-    flex-direction: column;
-    
+    flex-direction: column; /* Establece la dirección del contenido en columna */
+    align-items: center; /* Centra el contenido horizontalmente */
+    text-align: center;
   }
   
   .footer-links,
@@ -241,4 +246,5 @@ body {
   .producto {
     width: 100%;
   }
+
 }
