@@ -24,7 +24,7 @@ function mostrarProductos() {
         <h2>${producto.titulo}</h2>
         <img src="${producto.imagen}" alt="${producto.titulo}">
         <p>${producto.descripcion}</p>
-        <a href="${producto.enlace}">Ver producto</a>
+        <a target="_blank" href="${producto.enlace}">Ver producto</a>
       </div>
     `;
     

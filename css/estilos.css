@@ -16,6 +16,9 @@ hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padd
 input,select{vertical-align:middle}
 li{list-style:none}
 
+html {
+  scroll-behavior: smooth;
+}
 
 /* canvas{
     display:block;
@@ -48,24 +51,21 @@ body {
 .banner{
     width: 100%;
     height: 100%;
-    background-color: #b61924;
+    background-color: #424242;
     background-image: url('../img/bannerf.jpg');
     background-size: cover;
     background-position: 50% 50%;
     background-repeat: no-repeat;
 
 }
-.panelbanner{
+/* .panelbanner{
     position: absolute;
-    z-index: 10;
-    color: #fff;
     top: 50%;
     left: 15%;
     margin: -120px 0 0 -100px;
     padding: 20px;
-    border-radius: 4px;
-    box-sizing: border-box;
-    z-index: 100;
+    z-index: 100; 
+
 }
 .panelbanner img {
     transition: transform 0.2s ease-in-out; 
@@ -90,7 +90,7 @@ body {
     font-size: 4rem;
     line-height: 34px;
     color: #79BA00;
-}
+} */
 
 @keyframes sube-y-baja {
     0% { transform: translateY(0); }
@@ -118,27 +118,28 @@ body {
   .producto {
     width: 300px;
     margin: 20px;
-    padding: 20px;
+    padding: 30px;
     background-color: #f7f7f7;
     border-radius: 5px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    text-align: center;
   }
   
   .producto img {
     width: 100%;
     height: auto;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
   
   .producto h2 {
     font-size: 1.5rem;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
   
   .producto p {
     font-size: 1rem;
     line-height: 1.2;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
   
   .producto a {
@@ -149,6 +150,7 @@ body {
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s;
+    
   }
   
   .producto a:hover {
@@ -186,7 +188,7 @@ body {
   .footer-contact h3,
   .footer-social h3 {
     font-size: 1.5rem;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
   
   .footer-links ul,
@@ -200,7 +202,7 @@ body {
   .footer-links li,
   .footer-contact li,
   .footer-social li {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
   
   .footer-links a,
@@ -223,59 +225,37 @@ body {
   }
   
 
-  @media screen and (min-width: 320px) {
+  @media only screen and (max-width: 479px) and (min-width: 0px) {
     /* reglas CSS para pantallas pequeñas */
-    .panelbanner{
-      top: 100%;
-      left: 10%;
+    .containerf {
+      flex-direction: column;
+      margin-left: 20px;
     }
-    .panelbanner p {
-      color: #fff;
-  }
+    .producto {
+      width: 100%;
+    }
+    .footer-links,
+    .footer-contact,
+    .footer-social {
+      width: 100%;
+      margin-bottom: 40px;
+    }
   }
   
-  @media screen and (min-width: 480px) {
+  @media only screen and (max-width: 600px) and (min-width: 480px) {
     /* reglas CSS para pantallas medianas */
-    .panelbanner{
-      top: 80%;
-      left: 10%;
+
+    .containerf {
+      flex-direction: column;
+      margin-left: 20px;
     }
-    .panelbanner p {
-      color: #aa3535;
-  }
-  }
-  
-  @media screen and (min-width: 768px) {
-    /* reglas CSS para pantallas grandes */
-    .panelbanner{
-      top: 50%;
-      left: 10%;
+    .producto {
+      width: 100%;
     }
-    .panelbanner p {
-      color: #79BA00;
+    .footer-links,
+    .footer-contact,
+    .footer-social {
+      width: 100%;
+      margin-bottom: 40px;
+    }
   }
-
-    
-  }
-
-/* 
-  .panelbanner h1 {
-    font-size: 70px;
-  }
-  .panelbanner p {
-      font-size: 40px;
-  }
-
-  .containerf {
-    flex-direction: column;
-  }
-  .producto {
-    width: 100%;
-  }
-  .footer-links,
-  .footer-contact,
-  .footer-social {
-    width: 100%;
-    margin-bottom: 40px;
-  }
-   */
