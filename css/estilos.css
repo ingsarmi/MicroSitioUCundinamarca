@@ -173,6 +173,7 @@ body {
     justify-content:space-around;
     max-width: 1200px;
     margin: 0 auto;
+    
   }
   
   .footer-links,
@@ -225,37 +226,19 @@ body {
   }
   
 
-  @media only screen and (max-width: 479px) and (min-width: 0px) {
-    /* reglas CSS para pantallas pequeñas */
-    .containerf {
-      flex-direction: column;
-      margin-left: 20px;
-    }
-    .producto {
-      width: 100%;
-    }
-    .footer-links,
-    .footer-contact,
-    .footer-social {
-      width: 100%;
-      margin-bottom: 40px;
-    }
+ @media screen and (max-width: 768px) {
+  .containerf {
+    flex-direction: column;
+    
   }
   
-  @media only screen and (max-width: 600px) and (min-width: 480px) {
-    /* reglas CSS para pantallas medianas */
-
-    .containerf {
-      flex-direction: column;
-      margin-left: 20px;
-    }
-    .producto {
-      width: 100%;
-    }
-    .footer-links,
-    .footer-contact,
-    .footer-social {
-      width: 100%;
-      margin-bottom: 40px;
-    }
+  .footer-links,
+  .footer-contact,
+  .footer-social {
+    width: 100%;
+    margin-bottom: 40px;
   }
+  .producto {
+    width: 100%;
+  }
+}
